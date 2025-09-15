@@ -36,3 +36,15 @@ body {
     color: white;
     border-radius: 5px;
 }
+
+#tweet-btn {
+    margin-top: 20px;
+    margin-left: 10px; /* 왼쪽 버튼과 간격 띄우기 */
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background-color: #1DA1F2; /* 트위터 색상 */
+    color: white;
+    border-radius: 5px;
+}
