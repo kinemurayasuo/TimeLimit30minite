@@ -8,7 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentAuthor = '';
 
     async function getQuote() {
+        // --- 기능 추가 시작 ---
+        newQuoteBtn.disabled = true; // 버튼 비활성화
+        newQuoteBtn.textContent = '가져오는 중...'; // 버튼 텍스트 변경
+        // --- 기능 추가 끝 ---
+
         try {
+            
+            try {
+            
+            // 배경색 바꾸는 코드 딱 한 줄 추가!
+            document.body.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 95%)`;
+
             // (PC방 시간 문제 해결을 위해 http로 유지합니다)
             const response = await fetch('http://api.quotable.io/random');
             const data = await response.json();
@@ -18,6 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             quoteText.textContent = `"${currentQuote}"`;
             quoteAuthor.textContent = `- ${currentAuthor}`;
+        } catch (error) {
+            quoteText.textContent = "명언을 가져오는 데 실패했습니다.";
+            console.error(error);
+        } finally {
+            newQuoteBtn.disabled = false;
+            newQuoteBtn.textContent = '새 명언 가져오기';
+        }
         } catch (error) {
             quoteText.textContent = "명언을 가져오는 데 실패했습니다.";
             console.error(error);
