@@ -18,8 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Change background color
             document.body.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 95%)`;
 
-            // Use https for deployment to avoid mixed content issues
-            const response = await fetch('https://api.quotable.io/random');
+            // Automatically select http for local files and https for deployed sites
+            let apiUrl = 'https://api.quotable.io/random';
+            if (location.protocol === 'file:') {
+                apiUrl = 'http://api.quotable.io/random';
+            }
+            const response = await fetch(apiUrl);
             const data = await response.json();
 
             currentQuote = data.content;
