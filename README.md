@@ -1,22 +1,22 @@
-# 오늘의 명언 (Quote of the Day)
+# Quote of the Day
 
-이 프로젝트는 매일 새로운 명언을 보여주는 간단한 웹 애플리케이션입니다.
+This project is a simple web application that displays a new quote each day.
 
-## 기능
+## Features
 
-- **새로운 명언 가져오기**: 버튼을 클릭할 때마다 [Quotable API](https://github.com/lukePeavey/quotable)를 통해 새로운 명언을 랜덤으로 가져와 화면에 표시합니다.
-- **배경색 변경**: 새로운 명언을 가져올 때마다 페이지의 배경색이 랜덤으로 변경되어 시각적인 재미를 더합니다.
-- **트위터에 공유하기**: '트윗하기' 버튼을 클릭하면 현재 명언을 자신의 트위터 계정에 바로 공유할 수 있습니다.
-- **로딩 상태 표시**: 새로운 명언을 가져오는 동안 버튼이 비활성화되고 "가져오는 중..."이라는 텍스트가 표시되어 사용자에게 로딩 상태를 알려줍니다.
+- **Fetch New Quote**: Every time the button is clicked, a new random quote is fetched from the [Quotable API](https://github.com/lukePeavey/quotable) and displayed on the screen.
+- **Background Color Change**: The background color of the page changes randomly each time a new quote is fetched, adding a visual flair.
+- **Share on Twitter**: Clicking the 'Tweet' button allows you to instantly share the current quote on your Twitter account.
+- **Loading State**: While a new quote is being fetched, the button is disabled and displays "Loading..." to inform the user of the loading state.
 
-## 기술 스택
+## Tech Stack
 
 - HTML
 - CSS
 - JavaScript
 
-## 실행 방법
+## How to Run
 
-1. `index.html` 파일을 웹 브라우저에서 엽니다.
-2. '새 명언 가져오기' 버튼을 클릭하여 새로운 명언을 확인합니다.
-3. '트윗하기' 버튼을 클릭하여 명언을 트위터에 공유합니다.
+1. Open the `index.html` file in a web browser.
+2. Click the 'New Quote' button to see a new quote.
+3. Click the 'Tweet' button to share the quote on Twitter.
