@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 95%)`;
 
             // (PC방 시간 문제 해결을 위해 http로 유지합니다)
-                        const response = await fetch('https://api.quotable.io/random');
+                        const response = await fetch('http://api.quotable.io/random');
             const data = await response.json();
 
             currentQuote = data.content;
